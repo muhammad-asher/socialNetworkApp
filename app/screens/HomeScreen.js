@@ -1,13 +1,15 @@
 //import liraries
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
+import HomePostComponent from "../components/HomePostComponent";
 import colors from "../config/colors";
 
 // create a component
 const HomeScreen = () => {
 	return (
 		<View style={styles.container}>
-			<Text style={styles.text}>HomeScreen</Text>
+			<HomePostComponent />
+
 			<View style={styles.seperator}></View>
 		</View>
 	);
@@ -19,15 +21,12 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "center",
 		alignItems: "center",
-		backgroundColor: colors.dark,
-	},
-	text: {
-		color: colors.white,
+		backgroundColor: colors.white,
 	},
 	seperator: {
 		width: "100%",
 		height: 3,
-		backgroundColor: colors.grey,
+		backgroundColor: colors.black,
 	},
 });
 
