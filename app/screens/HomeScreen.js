@@ -13,8 +13,7 @@ import {
 	userImage3,
 	userImage4,
 } from "../../assets/images";
-import HeaderFeed from "../components/HeaderFeed";
-
+import StatusFeed from "../components/StatusFeed";
 const data = [
 	{
 		name: "Christina",
@@ -71,7 +70,7 @@ const data = [
 const HomeScreen = () => {
 	return (
 		<View style={styles.container}>
-			<HeaderFeed />
+			<StatusFeed />
 			<FlatList
 				data={data}
 				keyExtractor={(item, index) => index.toString()}

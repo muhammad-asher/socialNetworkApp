@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import { likeIcon, commentIcon } from "../../assets/icons";
-import HeaderFeed from "./HeaderFeed";
 
 // create a component
 const HomePostComponent = ({ item }) => {

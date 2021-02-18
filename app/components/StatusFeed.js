@@ -1,6 +1,6 @@
 //import liraries
 import React from "react";
-import { View, StyleSheet, Image, Text } from "react-native";
+import { View, StyleSheet, Image, Text, } from "react-native";
 import colors from "../config/colors";
 
 // create a component
@@ -12,7 +12,7 @@ function HeaderFeed(props) {
 					style={styles.statusimage}
 					source={require("../../assets/images/userImage1.jpg")}
 				/>
-                
+
 				<Image
 					shadowColor={colors.danger}
 					style={styles.statusimage}
@@ -41,6 +41,8 @@ const styles = StyleSheet.create({
 		borderRadius: 40,
 		marginHorizontal: 10,
 		borderColor: "red",
+		borderColor: "#4CACE4",
+		borderWidth: 3,
 	},
 	header: {
 		width: "100%",
@@ -58,7 +60,6 @@ const styles = StyleSheet.create({
 		fontSize: 10,
 		justifyContent: "center",
 	},
-	
 });
 
 //make this component available to the app
