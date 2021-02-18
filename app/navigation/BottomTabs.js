@@ -14,7 +14,6 @@ import {
   profileIcon,
   chatIcon,
 } from "../../assets/icons";
-import colors from "../config/colors";
 
 const Tab = createBottomTabNavigator();
 
