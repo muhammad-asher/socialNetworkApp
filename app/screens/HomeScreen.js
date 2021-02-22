@@ -66,11 +66,37 @@ const data = [
 		datecount: "5 months ago",
 	},
 ];
-
+const statusdata = [
+	{
+		image: userImage1,
+		statusname: "Mark",
+	},
+	{
+		image: userImage4,
+		statusname: "Christina",
+	},
+	{
+		image: userImage3,
+		statusname: "Albert",
+	},
+	{
+		image: userImage2,
+		statusname: "Darren",
+	},
+];
 const HomeScreen = () => {
 	return (
 		<View style={styles.container}>
-			<StatusFeed />
+			<FlatList
+				data={statusdata}
+				keyExtractor={(_, index) => index.toString()}
+				showsHorizontalScrollIndicator={false}
+				horizontal={true}
+				renderItem={({ item }) => {
+					return <StatusFeed item={item} />;
+				}}
+			/>
+
 			<FlatList
 				data={data}
 				keyExtractor={(item, index) => index.toString()}
