@@ -1,36 +1,64 @@
 //import liraries
-import React, { Component } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import React, { useState } from "react";
+import {
+	View,
+	Text,
+	StyleSheet,
+	Image,
+	Pressable,
+	TouchableOpacity,
+} from "react-native";
 import { likeIcon, commentIcon } from "../../assets/icons";
 
 // create a component
 const HomePostComponent = ({ item }) => {
+	const [iconsOpened, setIconsOpened] = useState(false);
 	return (
-		<View>
-			<View style={styles.container}>
-				<View style={styles.header}>
-					<Image source={item.avatar} style={styles.headerImage} />
-					<View style={styles.headerTop}>
-						<Text style={styles.name}>{item.name}</Text>
-						<View style={styles.headerBottom}>
-							<Text style={styles.date}>{item.datecount}</Text>
-							<Text style={styles.location}>{item.address}</Text>
-						</View>
+		<Pressable
+			onPress={() => {
+				if (iconsOpened) {
+					setIconsOpened(false);
+				}
+			}}
+			style={styles.container}
+		>
+			<View style={styles.header}>
+				<Image source={item.avatar} style={styles.headerImage} />
+				<View style={styles.headerTop}>
+					<Text style={styles.name}>{item.name}</Text>
+					<View style={styles.headerBottom}>
+						<Text style={styles.date}>{item.datecount}</Text>
+						<Text style={styles.location}>{item.address}</Text>
 					</View>
 				</View>
-				<View>
-					<Text style={styles.postText}>{item.text}</Text>
-					<Image source={item.postImage} style={styles.postImage} />
-				</View>
-
-				<View style={styles.cardFooter}>
-					<Image source={likeIcon} style={styles.footerIcon} />
-					<Text style={styles.footerCount}>{item.likeCount}</Text>
-					<Image source={commentIcon} style={styles.footerIcon} />
-					<Text style={styles.footerCount}>{item.commentCount}</Text>
-				</View>
 			</View>
-		</View>
+			<View>
+				<Text style={styles.postText}>{item.text}</Text>
+				<Image source={item.postImage} style={styles.postImage} />
+			</View>
+			{iconsOpened ? (
+				<View style={styles.reactionContainer}>
+					<Image source={likeIcon} style={styles.reactionIcon} />
+					<Image source={likeIcon} style={styles.reactionIcon} />
+					<Image source={likeIcon} style={styles.reactionIcon} />
+					<Image source={likeIcon} style={styles.reactionIcon} />
+					<Image source={likeIcon} style={styles.reactionIcon} />
+				</View>
+			) : null}
+			<View style={styles.cardFooter}>
+				<TouchableOpacity
+					onLongPress={() => {
+						setIconsOpened(true);
+					}}
+				>
+					<Image source={likeIcon} style={styles.footerIcon} />
+				</TouchableOpacity>
+
+				<Text style={styles.footerCount}>{item.likeCount}</Text>
+				<Image source={commentIcon} style={styles.footerIcon} />
+				<Text style={styles.footerCount}>{item.commentCount}</Text>
+			</View>
+		</Pressable>
 	);
 };
 
@@ -92,6 +120,22 @@ const styles = StyleSheet.create({
 	},
 	footerCount: {
 		marginRight: 20,
+	},
+	reactionIcon: {
+		resizeMode: "contain",
+		height: 30,
+		width: 30,
+		marginRight: 5,
+	},
+	reactionContainer: {
+		flexDirection: "row",
+		backgroundColor: "white",
+		alignSelf: "center",
+		borderRadius: 20,
+		paddingHorizontal: 10,
+		position: "absolute",
+		bottom: 65,
+		paddingVertical: 5,
 	},
 });
 

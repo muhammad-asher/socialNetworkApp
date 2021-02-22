@@ -17,10 +17,11 @@ function StatusFeed({ item }) {
 
 // define your styles
 const styles = StyleSheet.create({
-	container: { marginTop: 10, backgroundColor: "white", height: 120 },
+	container: { marginVertical: 10, backgroundColor: "white", height: 120,alignItems:"center" },
 	statusimage: {
-		height: 72,
-		width: 72,
+		resizeMode:"cover",
+		height: 74,
+		width: 74,
 		borderRadius: 36,
 		marginHorizontal: 10,
 		borderColor: "red",
