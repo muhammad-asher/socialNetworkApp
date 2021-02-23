@@ -8,7 +8,15 @@ import {
 	Pressable,
 	TouchableOpacity,
 } from "react-native";
-import { likeIcon, commentIcon } from "../../assets/icons";
+import {
+	likeIcon,
+	commentIcon,
+	inLoveIcon,
+	laughingIcon,
+	sadIcon,
+	thumbIcon,
+	angryIcon,
+} from "../../assets/icons";
 
 // create a component
 const HomePostComponent = ({ item }) => {
@@ -38,11 +46,11 @@ const HomePostComponent = ({ item }) => {
 			</View>
 			{iconsOpened ? (
 				<View style={styles.reactionContainer}>
+					<Image source={thumbIcon} style={styles.reactionIcon} />
 					<Image source={likeIcon} style={styles.reactionIcon} />
-					<Image source={likeIcon} style={styles.reactionIcon} />
-					<Image source={likeIcon} style={styles.reactionIcon} />
-					<Image source={likeIcon} style={styles.reactionIcon} />
-					<Image source={likeIcon} style={styles.reactionIcon} />
+					<Image source={sadIcon} style={styles.reactionIcon} />
+					<Image source={inLoveIcon} style={styles.reactionIcon} />
+					<Image source={angryIcon} style={styles.reactionIcon} />
 				</View>
 			) : null}
 			<View style={styles.cardFooter}>
@@ -51,7 +59,7 @@ const HomePostComponent = ({ item }) => {
 						setIconsOpened(true);
 					}}
 				>
-					<Image source={likeIcon} style={styles.footerIcon} />
+					<Image source={thumbIcon} style={styles.footerIcon} />
 				</TouchableOpacity>
 
 				<Text style={styles.footerCount}>{item.likeCount}</Text>
