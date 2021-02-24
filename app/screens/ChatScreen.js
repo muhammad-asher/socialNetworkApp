@@ -34,10 +34,10 @@ const ChatData = [
 		text: "MF how are you??",
 	},
 ];
-const ChatScreen = () => {
+const ChatScreen = ({ navigation }) => {
 	return (
 		<View style={styles.container}>
-      <SearchComponent />
+			<SearchComponent />
 			<FlatList
 				data={ChatData}
 				keyExtractor={(_, index) => index.toString()}
@@ -51,7 +51,7 @@ const ChatScreen = () => {
 				data={ChatData}
 				keyExtractor={(_, index) => index.toString()}
 				renderItem={({ item }) => {
-					return <ChatCard item={item} />;
+					return <ChatCard item={item} navigation={navigation} />;
 				}}
 			/>
 		</View>
@@ -62,7 +62,7 @@ const ChatScreen = () => {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-    backgroundColor:"white"
+		backgroundColor: "white",
 	},
 });
 

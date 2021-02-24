@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from "react";
-import { View, Text, StyleSheet, ScrollView, FlatList } from "react-native";
+import { View, StyleSheet, FlatList } from "react-native";
 import HomePostComponent from "../components/HomePostComponent";
 import {
 	postImage1,
@@ -84,7 +84,7 @@ const statusdata = [
 		statusname: "Darren",
 	},
 ];
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
 	return (
 		<View style={styles.container}>
 			<FlatList
@@ -102,7 +102,7 @@ const HomeScreen = () => {
 				keyExtractor={(item, index) => index.toString()}
 				showsVerticalScrollIndicator={false}
 				renderItem={({ item }) => {
-					return <HomePostComponent item={item} />;
+					return <HomePostComponent item={item} navigation={navigation} />;
 				}}
 			/>
 		</View>

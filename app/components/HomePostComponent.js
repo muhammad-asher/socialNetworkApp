@@ -19,7 +19,7 @@ import {
 } from "../../assets/icons";
 
 // create a component
-const HomePostComponent = ({ item }) => {
+const HomePostComponent = ({ item, navigation }) => {
 	const [iconsOpened, setIconsOpened] = useState(false);
 	return (
 		<Pressable
@@ -41,7 +41,13 @@ const HomePostComponent = ({ item }) => {
 				</View>
 			</View>
 			<View>
-				<Text style={styles.postText}>{item.text}</Text>
+				<TouchableOpacity
+					onPress={() => {
+						navigation.navigate("PostDetailScreen");
+					}}
+				>
+					<Text style={styles.postText}>{item.text}</Text>
+				</TouchableOpacity>
 				<Image source={item.postImage} style={styles.postImage} />
 			</View>
 			{iconsOpened ? (

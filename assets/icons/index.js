@@ -11,3 +11,6 @@ export const laughingIcon = require("./laughing.png");
 export const sadIcon = require("./sad.png");
 export const thumbIcon = require("./thumb.png");
 export const angryIcon = require("./angry.png");
+
+export const camera = require("./camera.png");
+export const checklist = require("./list.png");
