@@ -10,12 +10,12 @@ const SearchComponent = () => {
 			<Searchbar
 				placeholder="Search"
 				style={{
-					backgroundColor: "rgba(255,255,255,0.5)",
-					width: "90%",
+					backgroundColor: "rgba(255,255,255,0.6)",
+					width: "96%",
 					height: 40,
 					marginTop: 10,
+					borderRadius: 40,
 				}}
-				
 			/>
 		</View>
 	);

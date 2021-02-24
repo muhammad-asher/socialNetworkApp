@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, FlatList } from "react-native";
 import SearchComponent from "../components/SearchComponent";
-import colors from "../config/colors";
 import {
 	userImage1,
 	userImage2,

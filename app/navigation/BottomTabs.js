@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import CommunityScreen from "../screens/CommunityScreen";
+import CommunityStack from "./CommunityStack";
 import ProfileScreen from "../screens/ProfileScreen";
 import SearchScreen from "../screens/SearchScreen";
 import HomeStack from "./HomeStack";
@@ -81,7 +81,7 @@ function BottomTabs() {
 			/>
 			<Tab.Screen
 				name="Community"
-				component={CommunityScreen}
+				component={CommunityStack}
 				options={{
 					tabBarLabel: "",
 				}}
