@@ -1,7 +1,6 @@
 //import liraries
 import React from "react";
 import { View, StyleSheet, Image, Text } from "react-native";
-import colors from "../config/colors";
 
 // create a component
 function StatusFeed({ item }) {
@@ -17,9 +16,14 @@ function StatusFeed({ item }) {
 
 // define your styles
 const styles = StyleSheet.create({
-	container: { marginVertical: 10, backgroundColor: "white", height: 120,alignItems:"center" },
+	container: {
+		marginVertical: 10,
+		backgroundColor: "white",
+		height: 120,
+		alignItems: "center",
+	},
 	statusimage: {
-		resizeMode:"cover",
+		resizeMode: "cover",
 		height: 74,
 		width: 74,
 		borderRadius: 36,

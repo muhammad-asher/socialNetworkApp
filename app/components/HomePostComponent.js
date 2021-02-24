@@ -51,6 +51,7 @@ const HomePostComponent = ({ item }) => {
 					<Image source={sadIcon} style={styles.reactionIcon} />
 					<Image source={inLoveIcon} style={styles.reactionIcon} />
 					<Image source={angryIcon} style={styles.reactionIcon} />
+					<Image source={laughingIcon} style={styles.reactionIcon} />
 				</View>
 			) : null}
 			<View style={styles.cardFooter}>
