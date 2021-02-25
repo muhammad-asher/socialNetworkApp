@@ -8,10 +8,13 @@ import {
 	postImage3,
 	postImage4,
 	postImage5,
+	postImage6,
 	userImage1,
 	userImage2,
 	userImage3,
 	userImage4,
+	userImage5,
+	userImage6,
 } from "../../assets/images";
 import StatusFeed from "../components/StatusFeed";
 const data = [
@@ -65,15 +68,29 @@ const data = [
 		commentCount: 13,
 		datecount: "5 months ago",
 	},
+	{
+		name: "Marsh",
+		postImage: postImage6,
+		address: "Tartu,Estonia",
+		text: "This is a very nice post",
+		avatar: userImage6,
+		likeCount: 30,
+		commentCount: 17,
+		datecount: "8 months ago",
+	},
 ];
 const statusdata = [
+	{
+		image: userImage4,
+		statusname: "Christina",
+	},
 	{
 		image: userImage1,
 		statusname: "Mark",
 	},
 	{
-		image: userImage4,
-		statusname: "Christina",
+		image: userImage6,
+		statusname: "Yousaf",
 	},
 	{
 		image: userImage3,
@@ -82,6 +99,10 @@ const statusdata = [
 	{
 		image: userImage2,
 		statusname: "Darren",
+	},
+	{
+		image: userImage5,
+		statusname: "Mosh",
 	},
 ];
 const HomeScreen = ({ navigation }) => {

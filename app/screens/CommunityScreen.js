@@ -6,6 +6,8 @@ import {
 	userImage2,
 	userImage3,
 	userImage4,
+	userImage5,
+	userImage6,
 } from "../../assets/images";
 import FriendsCard from "../components/FriendsCard";
 import SearchComponent from "../components/SearchComponent";
@@ -13,22 +15,32 @@ import SearchComponent from "../components/SearchComponent";
 const friendsData = [
 	{
 		image: userImage1,
-		name: "Mark",
+		name: "Christian",
 		status: "Accept",
 	},
 	{
 		image: userImage4,
-		name: "Christina",
+		name: "Ayesha",
 		status: "Unfriend",
 	},
 	{
 		image: userImage3,
-		name: "Albert",
+		name: "Alberta",
 		status: "Unfriend",
 	},
 	{
 		image: userImage2,
-		name: "Darren",
+		name: "Darreno",
+		status: "Unfriend",
+	},
+	{
+		image: userImage5,
+		name: "Hannan",
+		status: "Unfriend",
+	},
+	{
+		image: userImage6,
+		name: "Yousaf",
 		status: "Unfriend",
 	},
 ];

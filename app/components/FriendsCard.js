@@ -10,15 +10,16 @@ const FriendsCard = ({ item }) => {
 			<View>
 				<Text style={styles.name}>{item.name}</Text>
 			</View>
-
-			<Button
-				style={styles.button}
-				mode="outlined"
-				onPress={() => console.log(item.status)}
-				color="white"
-			>
-				{item.status}
-			</Button>
+			<View style={styles.buttoncontainer}>
+				<Button
+					style={styles.button}
+					mode="outlined"
+					onPress={() => console.log(item.status)}
+					color="white"
+				>
+					{item.status}
+				</Button>
+			</View>
 		</View>
 	);
 };
@@ -46,14 +47,15 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		alignItems: "center",
 	},
-	subText: {
-		fontSize: 13,
-		color: "grey",
-	},
+
 	button: {
-		marginHorizontal: 80,
+		justifyContent: "center",
+		alignItems: "center",
 		borderRadius: 40,
-		backgroundColor: "rgba(0,0,0,0.5)",
+		backgroundColor: "rgba(0,0,0,0.4)",
+	},
+	buttoncontainer: {
+		paddingLeft: 78,
 	},
 });
 

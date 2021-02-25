@@ -7,6 +7,8 @@ import {
 	userImage2,
 	userImage3,
 	userImage4,
+	userImage5,
+	userImage6,
 } from "../../assets/images";
 import StatusFeed from "../components/StatusFeed";
 import ChatCard from "../components/ChatCard";
@@ -28,8 +30,18 @@ const ChatData = [
 		text: "MF how are you??",
 	},
 	{
+		image: userImage6,
+		statusname: "Yousaf",
+		text: "MF how are you??",
+	},
+	{
 		image: userImage2,
 		statusname: "Darren",
+		text: "MF how are you??",
+	},
+	{
+		image: userImage5,
+		statusname: "Mosh",
 		text: "MF how are you??",
 	},
 ];
