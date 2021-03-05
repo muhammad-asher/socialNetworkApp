@@ -5,6 +5,7 @@ import CommunityStack from "./CommunityStack";
 import ProfileScreen from "../screens/ProfileScreen";
 import SearchScreen from "../screens/SearchScreen";
 import HomeStack from "./HomeStack";
+import ProfileStack from "../navigation/ProfileStack";
 import {
 	searchIcon,
 	homeIcon,
@@ -88,7 +89,7 @@ function BottomTabs() {
 			/>
 			<Tab.Screen
 				name="Profile"
-				component={ProfileScreen}
+				component={ProfileStack}
 				options={{
 					tabBarLabel: "",
 				}}

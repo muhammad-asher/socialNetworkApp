@@ -14,3 +14,4 @@ export const angryIcon = require("./angry.png");
 
 export const camera = require("./camera.png");
 export const checklist = require("./list.png");
+export const bell = require("./bell.png");
