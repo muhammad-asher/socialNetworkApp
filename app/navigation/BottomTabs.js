@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import CommunityStack from "./CommunityStack";
 import ProfileScreen from "../screens/ProfileScreen";
 import SearchScreen from "../screens/SearchScreen";
+import SearchStack from "./SearchStack";
 import HomeStack from "./HomeStack";
 import ProfileStack from "../navigation/ProfileStack";
 import {
@@ -68,7 +69,7 @@ function BottomTabs() {
 			/>
 			<Tab.Screen
 				name="Search"
-				component={SearchScreen}
+				component={SearchStack}
 				options={{
 					tabBarLabel: "",
 				}}

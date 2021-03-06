@@ -11,7 +11,7 @@ import {
 } from "../../assets/images";
 import ImageFriendCard from "../components/ImageFriendCard";
 
-const ProfileScreen = () => {
+const ProfileScreen = ({ navigation }) => {
 	const listData = [
 		{
 			image: userImage4,
@@ -46,7 +46,12 @@ const ProfileScreen = () => {
 		>
 			<Image source={userImage6} style={styles.avatar} />
 			<Text style={styles.name}>Mike Heyman</Text>
-			<Text style={styles.settingButton}>Profile Setting</Text>
+			<Text
+				style={styles.settingButton}
+				onPress={() => navigation.navigate("SettingScreen")}
+			>
+				Profile Settings
+			</Text>
 
 			<FlatList
 				data={listData}
@@ -63,7 +68,12 @@ const ProfileScreen = () => {
 					return <ImageFriendCard item={item} />;
 				}}
 			/>
-			<Text style={styles.allfriendsButton}>See all Friends</Text>
+			<Text
+				style={styles.allfriendsButton}
+				onPress={() => navigation.navigate("AllFriendsScreen")}
+			>
+				See all Friends
+			</Text>
 		</ScrollView>
 	);
 };

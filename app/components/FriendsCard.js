@@ -29,9 +29,10 @@ const styles = StyleSheet.create({
 	container: {
 		flexDirection: "row",
 		alignItems: "center",
-
+		paddingVertical: 10,
 		marginTop: 10,
 		paddingVertical: 3,
+		justifyContent: "space-between",
 	},
 	avatar: {
 		resizeMode: "cover",

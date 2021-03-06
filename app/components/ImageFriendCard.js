@@ -16,11 +16,12 @@ function ImageCard({ item }) {
 const styles = StyleSheet.create({
 	container: {
 		margin: 3,
+		justifyContent: "space-between",
 	},
 	avatar: {
 		resizeMode: "cover",
 		height: 100,
-		width: 125,
+		width: 110,
 		borderRadius: 50,
 		marginTop: 7,
 		borderRadius: 10,
