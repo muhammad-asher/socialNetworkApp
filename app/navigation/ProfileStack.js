@@ -6,17 +6,11 @@ import NotificationScreen from "../screens/NotificationScreen";
 import SettingScreen from "../screens/SettingScreen";
 import { bell } from "../../assets/icons";
 import AllFriendsScreen from "../screens/AllFriendsScreen";
+import ChatDetailScreen from "../screens/ChatDetailScreen";
+
 const Stack = createStackNavigator();
 
 function ProfileStack() {
-	const headerLeft = (navigation) => {
-		return (
-			<TouchableOpacity onPress={() => navigation.navigate("SettingScreen")}>
-				<Image source={settingsIcon} style={styles.leftImage} />
-			</TouchableOpacity>
-		);
-	};
-
 	const headerRight = (navigation) => {
 		return (
 			<TouchableOpacity
@@ -38,6 +32,13 @@ function ProfileStack() {
 					headerTitleAlign: "center",
 					headerStyle: styles.header,
 				})}
+			/>
+			<Stack.Screen
+				name="ChatDetailScreen"
+				component={ChatDetailScreen}
+				options={{
+					title: "Chat Post Detail",
+				}}
 			/>
 			<Stack.Screen
 				name="NotificationScreen"

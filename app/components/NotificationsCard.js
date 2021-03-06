@@ -8,7 +8,7 @@ const NotificationsCard = ({ item }) => {
 		<View style={styles.container}>
 			<Image source={item.postImage} style={styles.avatar} />
 
-			<Text style={styles.subText}>{item.text}</Text>
+			<Text style={styles.subText}>{item.name}</Text>
 		</View>
 	);
 };
