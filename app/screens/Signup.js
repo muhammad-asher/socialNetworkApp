@@ -8,7 +8,9 @@ import {
 	ActivityIndicator,
 } from "react-native";
 import { TextInput } from "react-native-paper";
-import firebase from "firebase";
+import * as firebase from "firebase";
+import "firebase/firestore";
+import colors from "../config/colors";
 
 // create a component
 
@@ -33,7 +35,25 @@ const Signup = ({ navigation }) => {
 		firebase
 			.auth()
 			.createUserWithEmailAndPassword(email, password)
-			.then(() => {
+			.then(async () => {
+				await firebase
+					.firestore()
+					.collection("users")
+					.add({
+						name: name,
+						email: email,
+						profilePic: "",
+						followers: 0,
+						folllowing: 0,
+						friendCount: 0,
+					})
+					.then(() => {
+						console.log("--user data added successfully--");
+					})
+					.catch((err) => {
+						console.log("--error storing user---", err);
+					});
+
 				console.log("User created successfully");
 				setLoading(false);
 			})
@@ -112,7 +132,7 @@ const styles = StyleSheet.create({
 	header: {
 		fontSize: 24,
 		fontWeight: "bold",
-		marginVertical: 20,
+		marginVertical: 30,
 	},
 	input: {
 		width: "90%",
@@ -123,7 +143,7 @@ const styles = StyleSheet.create({
 		color: "grey",
 	},
 	signupButton: {
-		backgroundColor: "#4DA9DD",
+		backgroundColor: colors.blue,
 		paddingVertical: 13,
 		width: "90%",
 		alignItems: "center",
