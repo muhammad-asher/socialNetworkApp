@@ -1,9 +1,7 @@
 import React from "react";
-import { Image, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
-import ProfileScreen from "../screens/ProfileScreen";
 import SearchScreen from "../screens/SearchScreen";
-import { camera, checklist, bell } from "../../assets/icons";
 
 const Stack = createStackNavigator();
 
